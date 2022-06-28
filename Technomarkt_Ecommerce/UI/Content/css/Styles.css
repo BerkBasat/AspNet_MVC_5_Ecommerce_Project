@@ -1,0 +1,26 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+#navbar .navbar-brand {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #F1C40F
+}
+
+
+    #navbar .navbar-brand:hover {
+        color: #D4AC0D
+    }
+
+
+
+#navbar .navbar-nav a {
+    font-weight: bold;
+    color: #F1C40F
+}
+
+    #navbar .navbar-nav a:hover {
+        color: #D4AC0D
+    }
+
+
