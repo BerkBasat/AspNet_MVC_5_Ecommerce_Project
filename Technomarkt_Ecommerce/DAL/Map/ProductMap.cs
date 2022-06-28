@@ -15,7 +15,7 @@ namespace DAL.Map
             ToTable("dbo.Products");
             Property(x => x.ProductName).IsRequired().HasMaxLength(255);
             Property(x => x.ProductImagePath).IsOptional().HasMaxLength(255);
-            Property(x => x.Description).IsRequired().HasMaxLength(255);
+            Property(x => x.Description).IsRequired();
             Property(x => x.SupplyCost).IsRequired();
             Property(x => x.UnitPrice).IsRequired();
             Property(x => x.UnitsInStock).IsOptional();

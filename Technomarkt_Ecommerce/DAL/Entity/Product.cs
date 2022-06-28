@@ -18,6 +18,8 @@ namespace DAL.Entity
 
         public Guid SubCategoryId { get; set; }
         public Guid SupplierId { get; set; }
+        public Guid BrandId { get; set; }
+        public virtual Brand Brand { get; set; }
         public virtual SubCategory SubCategory { get; set; }
         public virtual Supplier Supplier { get; set; }
     }

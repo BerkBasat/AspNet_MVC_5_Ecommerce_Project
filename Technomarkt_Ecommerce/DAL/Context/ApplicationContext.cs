@@ -13,6 +13,7 @@ namespace DAL.Context
     {
         //todo 1: Order, Order Details, Supplier Orders(tedarikçiden temin edilen ürünler) daha sonra eklenecek!
         //todo 2: Sipariş takibi için Order Status enum oluşturulacak!
+        //todo 3: AppUserRole eklenecek!
 
         public ApplicationContext()
         {
