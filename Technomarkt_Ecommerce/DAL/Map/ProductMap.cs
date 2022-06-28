@@ -18,7 +18,7 @@ namespace DAL.Map
             Property(x => x.Description).IsRequired().HasMaxLength(255);
             Property(x => x.SupplyCost).IsRequired();
             Property(x => x.UnitPrice).IsRequired();
-            Property(x => x.UnitsInStock).IsRequired();
+            Property(x => x.UnitsInStock).IsOptional();
         }
     }
 }

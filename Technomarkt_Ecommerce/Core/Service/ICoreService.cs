@@ -12,9 +12,6 @@ namespace Core.Service
         //Add
         string Add(T model);
 
-        //Add List
-        string Add(List<T> models);
-
         //Get
         T GetById(Guid id);
 

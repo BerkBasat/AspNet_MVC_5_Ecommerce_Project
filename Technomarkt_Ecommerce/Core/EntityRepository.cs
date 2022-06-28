@@ -12,6 +12,7 @@ namespace Core
         public EntityRepository()
         {
             Status = Status.Active;
+            CreatedDate = DateTime.Now;
         }
         public Guid ID { get; set; }
 
