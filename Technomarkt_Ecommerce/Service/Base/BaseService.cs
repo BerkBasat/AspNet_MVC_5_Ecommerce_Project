@@ -3,6 +3,7 @@ using Core.Service;
 using DAL.Context;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -56,6 +57,7 @@ namespace Service.Base
             try
             {
                 db.Set<T>().Remove(model);
+                db.SaveChanges();
                 return "Data deleted successfully!";
             }
             catch (Exception ex)
@@ -84,7 +86,8 @@ namespace Service.Base
             try
             {
                 T updated = GetById(model.ID);
-                db.Entry(model).State = System.Data.Entity.EntityState.Modified;
+                DbEntityEntry entity = db.Entry(updated);
+                entity.CurrentValues.SetValues(model);
                 db.SaveChanges();
                 return "Data updated successfully!";
             }

@@ -70,3 +70,16 @@ C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\obj\Debug\UI.csproj.
 C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\obj\Debug\UI.csproj.CopyComplete
 C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\obj\Debug\UI.dll
 C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\obj\Debug\UI.pdb
+C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\DAL.dll
+C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\Service.dll
+C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\EntityFramework.dll
+C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\Core.dll
+C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\DAL.pdb
+C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\DAL.dll.config
+C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\Service.pdb
+C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\Service.dll.config
+C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\EntityFramework.xml
+C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\Core.pdb
+C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\Core.dll.config
+C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\EntityFramework.SqlServer.dll
+C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\EntityFramework.SqlServer.xml
