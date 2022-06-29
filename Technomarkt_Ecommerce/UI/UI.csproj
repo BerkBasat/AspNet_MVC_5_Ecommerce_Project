@@ -135,6 +135,8 @@
     <Content Include="Areas\Admin\Views\SubCategory\Create.cshtml" />
     <Content Include="Areas\Admin\Views\SubCategory\Index.cshtml" />
     <Content Include="Areas\Admin\Views\SubCategory\Update.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Update.cshtml" />
     <None Include="Scripts\jquery-3.6.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
@@ -155,6 +157,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\ImageUploader.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -195,6 +198,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Views\Product\" />
+    <Folder Include="Content\img\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
