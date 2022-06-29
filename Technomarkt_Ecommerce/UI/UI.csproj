@@ -132,6 +132,9 @@
     <Content Include="Areas\Admin\Views\Supplier\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Supplier\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Supplier\Update.cshtml" />
+    <Content Include="Areas\Admin\Views\SubCategory\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\SubCategory\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\SubCategory\Update.cshtml" />
     <None Include="Scripts\jquery-3.6.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
@@ -192,7 +195,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Views\Product\" />
-    <Folder Include="Areas\Admin\Views\SubCategory\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
