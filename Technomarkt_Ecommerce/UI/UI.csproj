@@ -112,6 +112,15 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\css\styles.css" />
+    <Content Include="Content\img\asus-zenbook.jpg" />
+    <Content Include="Content\img\hpenvy-13.jpg" />
+    <Content Include="Content\img\iphonepro-12.jpg" />
+    <Content Include="Content\img\iphonepro-13.jpg" />
+    <Content Include="Content\img\macbook-pro.jpg" />
+    <Content Include="Content\img\macbook1.png" />
+    <Content Include="Content\img\macbookpro-16.jpg" />
+    <Content Include="Content\img\samsung-zfold3.jpg" />
+    <Content Include="Content\img\samsung1.png" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -198,7 +207,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Views\Product\" />
-    <Folder Include="Content\img\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>

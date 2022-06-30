@@ -13,7 +13,6 @@ namespace UI.Areas.Admin.Controllers
     public class HomeController : Controller
     {
         ProductService productService = new ProductService();
-        CategoryService categoryService = new CategoryService();
         SubCategoryService subCategoryService = new SubCategoryService();
         BrandService brandService = new BrandService();
         SupplierService supplierService = new SupplierService();
@@ -25,7 +24,6 @@ namespace UI.Areas.Admin.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.Categories = categoryService.GetList();
             ViewBag.SubCategories = subCategoryService.GetList();
             ViewBag.Brands = brandService.GetList();
             ViewBag.Suppliers = supplierService.GetList();
@@ -53,7 +51,6 @@ namespace UI.Areas.Admin.Controllers
 
         public ActionResult Update(Guid id)
         {
-            ViewBag.Categories = categoryService.GetList();
             ViewBag.SubCategories = subCategoryService.GetList();
             ViewBag.Brands = brandService.GetList();
             ViewBag.Suppliers = supplierService.GetList();
