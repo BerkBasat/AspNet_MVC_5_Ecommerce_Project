@@ -1,0 +1,33 @@
+﻿@model  UI.Models.LoginVM
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-4 mx-auto mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h2 style="text-align:center;">Login</h2>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <div class="mb-1">
+                        <label>Username:</label>
+                        @Html.ValidationMessageFor(x => x.UserName)
+                        <br />
+                        @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
+                    </div>
+                    <div class="mb-1">
+                        <label>Password:</label>
+                        @Html.ValidationMessageFor(x => x.Password)
+                        <br />
+                        @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+                    </div>
+                    <button type="submit" class="btn btn-dark">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

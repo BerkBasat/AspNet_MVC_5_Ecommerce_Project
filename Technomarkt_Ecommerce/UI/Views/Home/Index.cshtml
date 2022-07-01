@@ -1,4 +1,4 @@
-﻿
+﻿@model List<Product>
 @{
     ViewBag.Title = "Index";
 }
@@ -42,27 +42,31 @@
 </section>*@
 
 <section id="products">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-3">
+        <div class="row mt-5">
+            <div class="col-sm-12 col-md-6 col-lg-3 mt-2">
                 @Html.Action("_CategoryPartial")
                 @Html.Action("_BrandPartial")
             </div>
-            <div class="col-md-9">
-                <div class="product-card">
-                    <div class="product-tumb">
-                        <img src="static/images/macbook-pro.jpg" alt="mac-14">
-                    </div>
-                    <div class="product-details">
-                        <span class="product-catagory">Laptop</span>
-                        <h4><a href="#">MacBook Pro 14-inch</a></h4>
-                        <div class="product-bottom-details">
-                            <div class="product-price">$1999</div>
+            @foreach (var product in Model)
+            {
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-tumb">
+                            <img src="~/Content/img/@product.ProductImagePath" alt="mac-14">
+                        </div>
+                        <div class="product-details">
+                            <span class="product-catagory">@product.SubCategory.SubCategoryName</span>
+                            <h4><a href="#">@product.ProductName</a></h4>
+                            <div class="product-bottom-details">
+                                <div class="product-price">@product.UnitPrice</div>
+                            </div>
+                            <div class="row justify-content-center mt-2">
+                                <button type="button" class="btn btn-dark">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            }
         </div>
-    </div>
 </section>
 
