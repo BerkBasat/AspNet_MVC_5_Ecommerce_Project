@@ -1,0 +1,13 @@
+﻿@model List<SubCategory>
+
+<h5 class="table-header">Categories</h5>
+<ul class="list-group">
+    @foreach (var subcategory in Model)
+    {
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            @subcategory.SubCategoryName
+            <span class="badge bg-warning rounded-pill">@subcategory.Products.Count()</span>
+        </li>
+    }
+
+</ul>

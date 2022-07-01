@@ -10,6 +10,6 @@ namespace DAL.Entity
     public class Brand : EntityRepository
     {
         public string BrandName { get; set; }
-        public List<Product> Products { get; set; }
+        public virtual List<Product> Products { get; set; }
     }
 }

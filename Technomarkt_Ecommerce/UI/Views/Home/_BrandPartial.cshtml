@@ -1,0 +1,13 @@
+﻿@model List<Brand>
+
+<h5 class="table-header">Brands</h5>
+<ul class="list-group">
+    @foreach (var brand in Model)
+    {
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            @brand.BrandName
+            <span class="badge bg-warning rounded-pill">@brand.Products.Count()</span>
+        </li>
+    }
+
+</ul>

@@ -24,11 +24,111 @@
     }
 
 
+
 div h2 {
     font-family: Roboto, sans-serif;
     font-weight: bold;
     font-size: 2rem;
 }
+
+/*Filter Table*/
+.table-header{
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 4px;
+}
+
+/*Product Cards*/
+
+#products {
+    font-family: Roboto, sans-serif;
+}
+
+    #products h2 {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #283747;
+        padding-top: 20px;
+    }
+
+    #products a {
+        text-decoration: none;
+    }
+
+    #products .product-card {
+        width: 320px;
+        position: relative;
+        box-shadow: 0 2px 7px #dfdfdf;
+        margin: 50px auto;
+        background: #fafafa;
+    }
+
+    #products .product-tumb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        padding: 30px;
+        background: white;
+    }
+
+        #products .product-tumb img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+    #products .product-details {
+        padding: 30px;
+    }
+
+    #products .product-catagory {
+        display: block;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #ccc;
+        margin-bottom: 18px;
+    }
+
+    #products .product-details h4 a {
+        font-weight: 500;
+        display: block;
+        margin-bottom: 18px;
+        text-transform: uppercase;
+        color: #363636;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+        #products .product-details h4 a:hover {
+            color: #fbb72c;
+        }
+
+    #products .product-details p {
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: 18px;
+        color: #999;
+    }
+
+    #products .product-bottom-details {
+        overflow: hidden;
+        border-top: 1px solid #eee;
+        padding-top: 20px;
+    }
+
+        #products .product-bottom-details div {
+            float: left;
+            width: 50%;
+        }
+
+    #products .product-price {
+        font-size: 18px;
+        color: #fbb72c;
+        font-weight: 600;
+    }
+
 
 /*Forms*/
 
