@@ -96,6 +96,53 @@ namespace UI.Controllers
         }
 
 
+        public ActionResult AddToCart(Guid id)
+        {
+            try
+            {
+                Product product = productService.GetById(id);
+                Cart cart = null;
+
+                if (Session["cart"] == null)
+                {
+                    cart = new Cart();
+                }
+                else
+                {
+                    cart = Session["cart"] as Cart;
+                }
+
+                CartItem cartItem = new CartItem();
+                cartItem.Id = product.ID;
+                cartItem.ProductImage = product.ProductImagePath;
+                cartItem.ProductName = product.ProductName;
+                cartItem.Price = product.UnitPrice;
+                cart.AddItem(cartItem);
+                Session["cart"] = cart;
+
+                return RedirectToAction("Index");
+            }
+            catch (Exception)
+            {
+                TempData["error"] = $"Could not find a product with id no:{id}";
+                return View();
+            }
+        }
+
+        public ActionResult MyCart()
+        {
+            if (Session["cart"] != null)
+            {
+                return View();
+            }
+            else
+            {
+                TempData["error"] = "Your cart is empty!";
+                return RedirectToAction("Index");
+            }
+        }
+
+
 
         public PartialViewResult _CategoryPartial()
         {
