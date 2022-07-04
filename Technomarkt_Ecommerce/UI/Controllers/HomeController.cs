@@ -95,6 +95,19 @@ namespace UI.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult ProductDetails(Guid id)
+        {
+            var product = productService.GetById(id);
+            if(product != null)
+            {
+                return View(product);
+            }
+            else
+            {
+                return RedirectToAction("Index");
+            }
+        }
+
 
         public ActionResult AddToCart(Guid id)
         {
