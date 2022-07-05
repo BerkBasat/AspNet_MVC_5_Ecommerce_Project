@@ -55,9 +55,12 @@
     <Compile Include="Entity\AppUser.cs" />
     <Compile Include="Entity\Brand.cs" />
     <Compile Include="Entity\Category.cs" />
+    <Compile Include="Entity\Order.cs" />
+    <Compile Include="Entity\OrderDetail.cs" />
     <Compile Include="Entity\Product.cs" />
     <Compile Include="Entity\SubCategory.cs" />
     <Compile Include="Entity\Supplier.cs" />
+    <Compile Include="Enums\OrderStatus.cs" />
     <Compile Include="Map\AppUserMap.cs" />
     <Compile Include="Map\BrandMap.cs" />
     <Compile Include="Map\CategoryMap.cs" />

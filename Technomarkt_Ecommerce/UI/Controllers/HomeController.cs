@@ -12,7 +12,9 @@ namespace UI.Controllers
 {
     public class HomeController : Controller
     {
-        //todo 4: CAROUSEL IMAGES IN HOME PAGE DOESN'T WORK, FIX IT!!!
+        //todo: CAROUSEL IMAGES IN HOME PAGE DOESN'T WORK, FIX IT!!!
+        //todo: Fix layout!
+        //todo: Create wishlist!
 
         ProductService productService = new ProductService();
         SubCategoryService subCategoryService = new SubCategoryService();
@@ -108,6 +110,7 @@ namespace UI.Controllers
             }
         }
 
+        //Shopping Cart
 
         public ActionResult AddToCart(Guid id)
         {
@@ -156,7 +159,7 @@ namespace UI.Controllers
         }
 
 
-
+        //Partial Views
         public PartialViewResult _CategoryPartial()
         {
             return PartialView(subCategoryService.GetList());

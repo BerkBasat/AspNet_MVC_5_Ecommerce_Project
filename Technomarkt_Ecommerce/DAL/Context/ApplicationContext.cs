@@ -11,9 +11,8 @@ namespace DAL.Context
 {
     public class ApplicationContext:DbContext
     {
-        //todo 1: Order, Order Details, Supplier Orders(tedarikçiden temin edilen ürünler) daha sonra eklenecek!
-        //todo 2: Sipariş takibi için Order Status enum oluşturulacak!
-        //todo 3: AppUserRole eklenecek!
+        //todo: Supplier Orders(tedarikçiden temin edilen ürünler) daha sonra eklenecek!
+        //todo: AppUserRole eklenecek!
 
         public ApplicationContext()
         {
@@ -26,6 +25,8 @@ namespace DAL.Context
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<Brand> Brands { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Order> Orders { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
