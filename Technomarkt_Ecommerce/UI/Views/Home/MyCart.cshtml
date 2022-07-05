@@ -5,7 +5,7 @@
     UI.Models.Cart cart = Session["cart"] as UI.Models.Cart;
     decimal? totalPrice = 0;
     decimal? shipping = 12;
-    decimal? vat = 10;
+    decimal? vat = 14;
 }
 
 <section id="cart-page">
@@ -46,15 +46,24 @@
                     </div>
                     <div class="card-body">
                         <ul>
-                            @if (totalPrice >= 100)
+                            @if (totalPrice >= 300)
                             {
                                 <li><strong>Shipping: </strong>$0</li>
                             }
                             else
                             {
-                                <li><strong>Shipping: </strong>$12</li>
+                                totalPrice += shipping;
+                                <li><strong>Shipping: </strong>$@shipping</li>
                             }
-                            <li><strong>VAT: </strong>$24</li>
+                            @if (totalPrice <= 50)
+                            {
+                                <li><strong>VAT: </strong>$0</li>
+                            }
+                            else
+                            {
+                                totalPrice += vat;
+                                <li><strong>VAT: </strong>$@vat</li>
+                            }
                             <li><strong>Total Price: </strong>$@totalPrice</li>
                         </ul>
                     </div>

@@ -22,6 +22,8 @@ namespace DAL.Entity
         public DateTime? OrderDate { get; set; }
         public DateTime? DeliveryDate { get; set; }
 
+        public virtual List<OrderDetail> OrderDetails { get; set; }
+
 
     }
 }

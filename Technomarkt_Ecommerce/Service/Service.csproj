@@ -55,6 +55,8 @@
     <Compile Include="Concrete\AppUserService.cs" />
     <Compile Include="Concrete\BrandService.cs" />
     <Compile Include="Concrete\CategoryService.cs" />
+    <Compile Include="Concrete\OrderDetailService.cs" />
+    <Compile Include="Concrete\OrderService.cs" />
     <Compile Include="Concrete\ProductService.cs" />
     <Compile Include="Concrete\SubCategoryService.cs" />
     <Compile Include="Concrete\SupplierService.cs" />
