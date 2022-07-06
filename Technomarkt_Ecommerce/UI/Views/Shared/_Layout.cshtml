@@ -49,13 +49,45 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">About</a>
                         </li>
-                        <li class="nav-item me-2">
-                            <a class="nav-link active" aria-current="page" href="/Home/Wishlist">Wishlist</a>
-                        </li>
-                        <li class="nav-item me-2">
-                            <a class="nav-link active" aria-current="page" href="/Home/MyCart">My Cart</a>
-                        </li>
                     </ul>
+                    <form class="d-flex me-3">
+                        <a class="btn btn-outline-warning" href="/Home/Wishlist">
+                            Wishlist
+                            <span class="badge bg-warning text-black ms-1 rounded-pill">
+                                @{
+                                    if (Session["wishlist"] != null)
+                                    {
+                                        UI.Models.Wishlist wishlist = Session["wishlist"] as UI.Models.Wishlist;
+                                        <span>@wishlist.myWishlist.Count</span>
+                                    }
+                                    else
+                                    {
+                                        <span>0</span>
+                                    }
+
+                                }
+                            </span>
+                        </a>
+                    </form>
+                    <form class="d-flex">
+                        <a class="btn btn-outline-warning" href="/Home/MyCart">
+                            Cart
+                            <span class="badge bg-warning text-black ms-1 rounded-pill">
+                                @{
+                                    if (Session["cart"] != null)
+                                    {
+                                        UI.Models.Cart cart = Session["cart"] as UI.Models.Cart;
+                                        <span>@cart.myCart.Count</span>
+                                    }
+                                    else
+                                    {
+                                        <span>0</span>
+                                    }
+
+                                }
+                            </span>
+                        </a>
+                    </form>
                 </div>
             </div>
         </nav>
