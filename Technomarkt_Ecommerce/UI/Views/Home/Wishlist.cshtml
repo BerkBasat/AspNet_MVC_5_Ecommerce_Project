@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Wishlist";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    UI.Models.Wishlist wishlist = Session["wishlist"] as UI.Models.Wishlist;
+}
+
+<section id="wishlist-page">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 mx-auto">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Product Image</th>
+                            <th>Product Name</th>
+                            <th>Sub Category</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in wishlist.myWishlist.ToList())
+                        {
+                        <tr>
+                            <td width="50px">
+                                <img src="~/Content/img/@item.ProductImage" style="width:auto; height:70px" />
+                            </td>
+                            <td>@item.ProductName</td>
+                            <td>@item.SubCategory</td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+

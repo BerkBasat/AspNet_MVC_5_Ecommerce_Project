@@ -158,6 +158,55 @@ namespace UI.Controllers
             }
         }
 
+        //Wishlist
+
+        public ActionResult AddToWishlist(Guid id)
+        {
+            try
+            {
+                Product product = productService.GetById(id);
+                Wishlist wishlist = null;
+
+                if (Session["wishlist"] == null)
+                {
+                    wishlist = new Wishlist();
+                }
+                else
+                {
+                    wishlist = Session["wishlist"] as Wishlist;
+                }
+
+                WishlistItem wishlistItem = new WishlistItem();
+                wishlistItem.Id = product.ID;
+                wishlistItem.ProductImage = product.ProductImagePath;
+                wishlistItem.ProductName = product.ProductName;
+                wishlistItem.SubCategory = product.SubCategory.SubCategoryName;
+                wishlist.AddItem(wishlistItem);
+                Session["wishlist"] = wishlist;
+
+                return RedirectToAction("Index");
+            }
+            catch (Exception)
+            {
+                TempData["error"] = $"Could not find a product with id no:{id}";
+                return View();
+            }
+        }
+
+
+        public ActionResult Wishlist()
+        {
+            if (Session["wishlist"] != null)
+            {
+                return View();
+            }
+            else
+            {
+                TempData["error"] = "Your wishlist is empty!";
+                return RedirectToAction("Index");
+            }
+        }
+
 
         //Partial Views
         public PartialViewResult _CategoryPartial()
