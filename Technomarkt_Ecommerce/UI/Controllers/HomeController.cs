@@ -12,7 +12,7 @@ namespace UI.Controllers
 {
     public class HomeController : Controller
     {
-        //todo: CAROUSEL IMAGES IN HOME PAGE DOESN'T WORK, FIX IT!!!
+        //todo: Add text to carousel images!
         //todo: Fix layout!
         //todo: Create wishlist!
 

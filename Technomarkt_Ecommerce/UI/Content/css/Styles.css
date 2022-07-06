@@ -24,6 +24,21 @@
     }
 
 
+/*Carousel*/
+
+#carousel {
+    margin-top:20px;
+}
+
+#carousel img {
+    width: 35%;
+    height: 35%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
 
 div h2 {
     font-family: Roboto, sans-serif;
