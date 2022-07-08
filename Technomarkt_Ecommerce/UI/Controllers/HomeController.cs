@@ -191,6 +191,7 @@ namespace UI.Controllers
                     OrderDetail orderDetail = new OrderDetail();
                     orderDetail.OrderId = result.ID;
                     orderDetail.ProductId = item.Id;
+                    orderDetail.ProductName = item.ProductName;
                     orderDetail.UnitPrice = (decimal)item.Price;
                     orderDetail.Quantity = item.Quantity;
                     orderDetail.SubTotal = (decimal)item.SubTotal;

@@ -5,11 +5,11 @@
     decimal? totalPrice = 0;
 }
 
-<h1>We have received your order. Order no: <strong>@ViewBag.OrderNumber</strong></h1>
 
-<section>
+<section id="order-summary" style="margin-top:50px;">
     <div class="row">
         <div class="col-md-9">
+            <h1>We have received your order. Order no: <strong>@ViewBag.OrderNumber</strong></h1>
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
@@ -26,7 +26,7 @@
                         <tr>
 
                             <td>
-                                @item.Product.ProductName
+                                @item.ProductName
                             </td>
                             <td>
                                 @item.Quantity
