@@ -14,7 +14,6 @@ namespace UI.Controllers
     {
         //todo: Add text to carousel images!
         //todo: Fix layout!
-        //todo: Create wishlist!
 
         ProductService productService = new ProductService();
         SubCategoryService subCategoryService = new SubCategoryService();
@@ -156,6 +155,16 @@ namespace UI.Controllers
                 TempData["error"] = "Your cart is empty!";
                 return RedirectToAction("Index");
             }
+        }
+
+        public ActionResult BillingDetails()
+        {
+            return View();
+        }
+
+        public ActionResult Checkout()
+        {
+            return View();
         }
 
         //Wishlist
