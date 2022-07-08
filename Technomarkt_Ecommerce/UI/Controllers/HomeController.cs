@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using UI.Models;
+using UI.Utils;
 
 namespace UI.Controllers
 {
@@ -19,6 +20,8 @@ namespace UI.Controllers
         SubCategoryService subCategoryService = new SubCategoryService();
         BrandService brandService = new BrandService();
         AppUserService appUserService = new AppUserService();
+        OrderService orderService = new OrderService();
+        OrderDetailService orderDetailService = new OrderDetailService();
 
         public ActionResult Index(Guid? id)
         {
@@ -165,6 +168,55 @@ namespace UI.Controllers
         public ActionResult Checkout()
         {
             return View();
+        }
+
+        public ActionResult OrderComplete()
+        {
+            Cart cart = Session["cart"] as Cart;
+            AppUser user = Session["login"] as AppUser;
+
+            List<OrderDetail> orderDetailList = new List<OrderDetail>();
+
+            string productList = "";
+
+            if (cart != null)
+            {
+                Order order = new Order();
+                order.AppUserID = user.ID;
+                Order result = orderService.Add(order);
+
+                foreach (var item in cart.myCart)
+                {
+
+                    OrderDetail orderDetail = new OrderDetail();
+                    orderDetail.OrderId = result.ID;
+                    orderDetail.ProductId = item.Id;
+                    orderDetail.UnitPrice = (decimal)item.Price;
+                    orderDetail.Quantity = item.Quantity;
+                    orderDetail.SubTotal = (decimal)item.SubTotal;
+
+                    orderDetailList.Add(orderDetail);
+                    orderDetailService.Add(orderDetail);
+
+                    Product product = productService.GetById(item.Id);
+                    product.UnitsInStock -= Convert.ToInt16(item.Quantity);
+
+                    productList = $"Product: {item.ProductName} - Price: {item.Price} - Total: {item.SubTotal}";
+                }
+
+                Random rnd = new Random();
+                ViewBag.OrderNumber = rnd.Next(1000, 100000);
+
+                //string content = $"We have received your order. Order No: {ViewBag.OrderNumber}\tYour order: {productList}";
+                //MailSender.SendEmail(user.Email, "Order Info", content);
+
+                Session.Remove("cart");
+
+                orderDetailList = orderDetailService.GetDefault(x => x.OrderId == result.ID);
+
+            }
+
+            return View(orderDetailList);
         }
 
         //Wishlist

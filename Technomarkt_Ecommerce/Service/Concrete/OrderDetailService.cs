@@ -1,4 +1,5 @@
-﻿using DAL.Entity;
+﻿using DAL.Context;
+using DAL.Entity;
 using Service.Base;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,6 @@ namespace Service.Concrete
 {
     public class OrderDetailService : BaseService<OrderDetail>
     {
-
+        
     }
 }

@@ -18,7 +18,6 @@ namespace UI.Models
         public int Quantity { get; set; }
         public decimal? Price { get; set; }
 
-
         public decimal? SubTotal
         {
             get
@@ -26,5 +25,7 @@ namespace UI.Models
                 return Price * Quantity;
             }
         }
+
+        public decimal? Total { get; set; }
     }
 }

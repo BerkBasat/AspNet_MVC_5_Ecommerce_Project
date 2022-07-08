@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Mail;
 using System.Net;
+using System.Net.Mail;
 using System.Web;
 
 namespace UI.Utils
@@ -22,10 +22,9 @@ namespace UI.Utils
 
             //Smtp
             SmtpClient smtp = new SmtpClient();
-            smtp.UseDefaultCredentials = false;
             smtp.Credentials = new NetworkCredential("yzl3156yzl@gmail.com", "Yzl3156--");
             smtp.Port = 587;
-            smtp.Host = "smtp.google.com";
+            smtp.Host = "smtp.gmail.com";
             smtp.EnableSsl = true;
 
             smtp.Send(sender);

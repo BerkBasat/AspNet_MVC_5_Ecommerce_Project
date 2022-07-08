@@ -218,6 +218,7 @@
     <Content Include="Views\Home\Wishlist.cshtml" />
     <Content Include="Views\Home\BillingDetails.cshtml" />
     <Content Include="Views\Home\Checkout.cshtml" />
+    <Content Include="Views\Home\OrderComplete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

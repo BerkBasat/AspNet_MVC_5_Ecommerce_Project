@@ -9,6 +9,7 @@ namespace Core
 {
     public class EntityRepository : IEntity<Guid>
     {
+
         public EntityRepository()
         {
             Status = Status.Active;
