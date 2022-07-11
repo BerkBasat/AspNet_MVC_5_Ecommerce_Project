@@ -25,5 +25,10 @@ namespace UI.Models
             }
             _myCart.Add(cartItem.Id, cartItem);
         }
+
+        public void DeleteItem(CartItem cartItem)
+        {
+            _myCart.Remove(cartItem.Id);
+        }
     }
 }

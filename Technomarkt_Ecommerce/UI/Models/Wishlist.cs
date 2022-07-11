@@ -20,5 +20,10 @@ namespace UI.Models
         {
             _myWishlist.Add(wishlistItem.Id, wishlistItem);
         }
+
+        public void DeleteItem(WishlistItem wishlistItem)
+        {
+            _myWishlist.Remove(wishlistItem.Id);
+        }
     }
 }

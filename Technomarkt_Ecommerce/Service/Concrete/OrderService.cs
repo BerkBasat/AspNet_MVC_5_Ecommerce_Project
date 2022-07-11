@@ -11,6 +11,15 @@ namespace Service.Concrete
 {
     public class OrderService : BaseService<Order>
     {
+        ApplicationContext db = new ApplicationContext();
 
+        public Order Add(Order model)
+        {
+            model.ID = Guid.NewGuid();
+            var result = db.Set<Order>().Add(model);
+            db.SaveChanges();
+
+            return result;
+        }
     }
 }

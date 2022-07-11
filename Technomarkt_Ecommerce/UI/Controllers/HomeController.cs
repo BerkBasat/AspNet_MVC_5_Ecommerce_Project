@@ -182,13 +182,12 @@ namespace UI.Controllers
             {
 
                 Random rnd = new Random();
-                //ViewBag.OrderNumber = rnd.Next(1000, 100000);
                 string productList = "";
 
                 Order order = new Order();
                 order.AppUserID = user.ID;
                 order.OrderNo = rnd.Next(1000, 100000);
-                var result = orderService.Add(order);
+                Order result = orderService.Add(order);
 
                 foreach (var item in cart.myCart)
                 {

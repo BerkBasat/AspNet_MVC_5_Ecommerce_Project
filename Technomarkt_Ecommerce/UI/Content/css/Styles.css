@@ -146,6 +146,57 @@ div h2 {
     }
 
 
+
+/* Footer Section */
+
+#footer {
+    color: white;
+    background-color: #1c1f24;
+    padding-top: 30px;
+}
+
+    #footer .footer-social a {
+        color: #F1C40F;
+        font-size: 1.5rem;
+    }
+        #footer .footer-social a:hover {
+            color: #D4AC0D;
+            font-size: 1.5rem;
+        }
+
+    #footer li a {
+        text-decoration: none;
+        color: #F1C40F;
+    }
+        #footer li a:hover {
+            text-decoration: none;
+            color: #D4AC0D;
+        }
+
+    #footer button {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    #footer h2 {
+        font-family: Roboto,sans-serif;
+        font-weight: bold;
+        color: #F1C40F;
+    }
+
+    #footer .footer-brand {
+        font-family: Roboto,sans-serif;
+        font-weight: bold;
+        color: #F1C40F;
+        font-size: 2.5em;
+        margin-top: 15px;
+    } 
+
+    #footer .footer-card-icon {
+        font-size: 2.5rem;
+    }
+
+
 /*Forms*/
 
 
