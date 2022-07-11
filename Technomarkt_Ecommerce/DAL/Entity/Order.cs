@@ -18,6 +18,7 @@ namespace DAL.Entity
 
         public Guid AppUserID { get; set; }
         public AppUser AppUser { get; set; }
+        public int OrderNo { get; set; }
         public OrderStatus OrderStatus { get; set; }
         public DateTime? OrderDate { get; set; }
         public DateTime? DeliveryDate { get; set; }

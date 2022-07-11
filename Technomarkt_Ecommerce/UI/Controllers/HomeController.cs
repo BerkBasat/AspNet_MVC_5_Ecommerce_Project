@@ -177,13 +177,18 @@ namespace UI.Controllers
 
             List<OrderDetail> orderDetailList = new List<OrderDetail>();
 
-            string productList = "";
 
             if (cart != null)
             {
+
+                Random rnd = new Random();
+                //ViewBag.OrderNumber = rnd.Next(1000, 100000);
+                string productList = "";
+
                 Order order = new Order();
                 order.AppUserID = user.ID;
-                Order result = orderService.Add(order);
+                order.OrderNo = rnd.Next(1000, 100000);
+                var result = orderService.Add(order);
 
                 foreach (var item in cart.myCart)
                 {
@@ -191,6 +196,7 @@ namespace UI.Controllers
                     OrderDetail orderDetail = new OrderDetail();
                     orderDetail.OrderId = result.ID;
                     orderDetail.ProductId = item.Id;
+                    orderDetail.ProductImage = item.ProductImage;
                     orderDetail.ProductName = item.ProductName;
                     orderDetail.UnitPrice = (decimal)item.Price;
                     orderDetail.Quantity = item.Quantity;
@@ -205,10 +211,8 @@ namespace UI.Controllers
                     productList = $"Product: {item.ProductName} - Price: {item.Price} - Total: {item.SubTotal}";
                 }
 
-                Random rnd = new Random();
-                ViewBag.OrderNumber = rnd.Next(1000, 100000);
 
-                //string content = $"We have received your order. Order No: {ViewBag.OrderNumber}\tYour order: {productList}";
+                //string content = $"We have received your order. Order No: {order.OrderNo}\tYour order: {productList}";
                 //MailSender.SendEmail(user.Email, "Order Info", content);
 
                 Session.Remove("cart");
