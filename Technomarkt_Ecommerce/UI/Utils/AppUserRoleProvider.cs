@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DAL.Context;
+using Service.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,7 +10,7 @@ namespace UI.Utils
 {
     public class AppUserRoleProvider : RoleProvider
     {
-
+        ApplicationContext db = new ApplicationContext();
 
         public override string ApplicationName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
@@ -39,7 +41,8 @@ namespace UI.Utils
 
         public override string[] GetRolesForUser(string username)
         {
-            throw new NotImplementedException();
+            var userRoleList = from user in db.AppUsers join userandrole in db.AppUserAndRoles on user.ID equals userandrole.AppUserId join role in db.AppUserRoles on userandrole.AppUserRoleId equals role.ID where user.Username == username select role.RoleName;
+            return userRoleList.ToArray();
         }
 
         public override string[] GetUsersInRole(string roleName)

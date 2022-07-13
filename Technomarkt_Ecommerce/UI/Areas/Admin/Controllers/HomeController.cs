@@ -10,6 +10,7 @@ using UI.Utils;
 
 namespace UI.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class HomeController : Controller
     {
         ProductService productService = new ProductService();
