@@ -38,6 +38,21 @@
     background-repeat: no-repeat;
 }
 
+#carousel .carousel-caption-1{
+    margin-bottom:11em;
+    font-family: Roboto, sans-serif;
+    font-size: 3em;
+    font-weight:bold;  
+}
+
+#carousel .carousel-caption-2{
+    font-family: Roboto, sans-serif;
+    font-size: 3em;
+    font-weight:bold;
+    text-align:left;
+    margin-bottom:11em;
+}
+
 
 
 div h2 {
