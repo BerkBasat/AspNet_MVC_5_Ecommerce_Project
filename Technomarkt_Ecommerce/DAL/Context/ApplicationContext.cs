@@ -12,7 +12,6 @@ namespace DAL.Context
     public class ApplicationContext:DbContext
     {
         //todo: Supplier Orders(tedarikçiden temin edilen ürünler) daha sonra eklenecek!
-        //todo: AppUserRole eklenecek!
 
         public ApplicationContext()
         {
@@ -27,6 +26,8 @@ namespace DAL.Context
         public DbSet<Brand> Brands { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<AppUserAndRole> AppUserAndRoles { get; set; }
+        public DbSet<AppUserRole> AppUserRoles { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -37,6 +38,13 @@ namespace DAL.Context
             modelBuilder.Configurations.Add(new SupplierMap());
             modelBuilder.Configurations.Add(new AppUserMap());
             modelBuilder.Configurations.Add(new BrandMap());
+
+            modelBuilder.Entity<AppUserAndRole>().HasKey(x => new
+            {
+                x.AppUserId,
+                x.AppUserRoleId
+            });
+
             base.OnModelCreating(modelBuilder);
         }
 

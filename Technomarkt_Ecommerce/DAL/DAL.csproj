@@ -53,6 +53,8 @@
   <ItemGroup>
     <Compile Include="Context\ApplicationContext.cs" />
     <Compile Include="Entity\AppUser.cs" />
+    <Compile Include="Entity\AppUserAndRole.cs" />
+    <Compile Include="Entity\AppUserRole.cs" />
     <Compile Include="Entity\Brand.cs" />
     <Compile Include="Entity\Category.cs" />
     <Compile Include="Entity\Order.cs" />

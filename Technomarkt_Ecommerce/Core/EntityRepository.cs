@@ -14,6 +14,10 @@ namespace Core
         {
             Status = Status.Active;
             CreatedDate = DateTime.Now;
+            CreatedComputerName = Environment.MachineName;
+            CreatedIP = "192.168.31.146";
+            CreatedAdUsername = "Admin";
+            CreatedBy = "Admin";
         }
         public Guid ID { get; set; }
 
