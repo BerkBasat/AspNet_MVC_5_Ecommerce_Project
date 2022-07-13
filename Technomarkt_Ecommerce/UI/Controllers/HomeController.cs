@@ -13,7 +13,6 @@ namespace UI.Controllers
 {
     public class HomeController : Controller
     {
-        //todo: Add text to carousel images!
         //todo: Fix layout!
         //todo: Add user roles
         //todo: Create accountant and depot areas
