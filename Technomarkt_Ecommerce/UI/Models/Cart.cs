@@ -26,9 +26,12 @@ namespace UI.Models
             _myCart.Add(cartItem.Id, cartItem);
         }
 
-        public void DeleteItem(CartItem cartItem)
+        public void DeleteItem(Guid id)
         {
-            _myCart.Remove(cartItem.Id);
+            if (_myCart.ContainsKey(id))
+            {
+                _myCart.Remove(id);
+            }
         }
     }
 }

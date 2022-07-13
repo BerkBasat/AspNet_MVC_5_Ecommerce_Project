@@ -15,6 +15,9 @@ namespace UI.Controllers
     {
         //todo: Add text to carousel images!
         //todo: Fix layout!
+        //todo: Add user roles
+        //todo: Create accountant and depot areas
+        //todo: User authentication
 
         ProductService productService = new ProductService();
         SubCategoryService subCategoryService = new SubCategoryService();
@@ -147,6 +150,18 @@ namespace UI.Controllers
             }
         }
 
+        public ActionResult DeleteCartItem(Guid id)
+        {
+            Cart cart = Session["cart"] as Cart;
+
+            if(cart != null)
+            {
+                cart.DeleteItem(id);
+            }
+
+            return RedirectToAction("MyCart");
+        }
+
         public ActionResult MyCart()
         {
             if (Session["cart"] != null)
@@ -256,6 +271,18 @@ namespace UI.Controllers
                 TempData["error"] = $"Could not find a product with id no:{id}";
                 return View();
             }
+        }
+
+        public ActionResult DeleteWishlistItem(Guid id)
+        {
+            Wishlist wishlist = Session["wishlist"] as Wishlist;
+
+            if (id != null)
+            {
+                wishlist.DeleteItem(id);
+            }
+
+            return RedirectToAction("Wishlist");
         }
 
 

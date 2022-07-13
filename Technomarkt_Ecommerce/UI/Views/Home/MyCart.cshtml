@@ -33,6 +33,7 @@
                                 <td>@item.Quantity</td>
                                 <td>$@item.Price</td>
                                 <td>$@item.SubTotal</td>
+                                <td>@Html.ActionLink("Delete", "DeleteCartItem", new { id = item.Id }, new { @class = "btn btn-danger" })</td>
                             </tr>
                         }
                     </tbody>

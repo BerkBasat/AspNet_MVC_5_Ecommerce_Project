@@ -27,6 +27,7 @@
                             </td>
                             <td>@item.ProductName</td>
                             <td>@item.SubCategory</td>
+                            <td>@Html.ActionLink("Delete", "DeleteWishlistItem", new { id = item.Id }, new { @class = "btn btn-danger" })</td>
                         </tr>
                         }
                     </tbody>

@@ -21,9 +21,12 @@ namespace UI.Models
             _myWishlist.Add(wishlistItem.Id, wishlistItem);
         }
 
-        public void DeleteItem(WishlistItem wishlistItem)
+        public void DeleteItem(Guid id)
         {
-            _myWishlist.Remove(wishlistItem.Id);
+            if (_myWishlist.ContainsKey(id))
+            {
+                _myWishlist.Remove(id);
+            }
         }
     }
 }
