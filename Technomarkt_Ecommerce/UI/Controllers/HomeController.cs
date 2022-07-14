@@ -30,16 +30,9 @@ namespace UI.Controllers
         OrderDetailService orderDetailService = new OrderDetailService();
 
 
-        public ActionResult Index(Guid? id)
+        public ActionResult Index()
         {
-            if(id == null)
-            {
-                return View(productService.GetList());
-            }
-            else
-            {
-                return View(productService.GetDefault(x => x.SubCategoryId == id));
-            }
+            return View(productService.GetList());
         }
 
         public ActionResult Contact()

@@ -163,6 +163,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Accountant\AccountantAreaRegistration.cs" />
+    <Compile Include="Areas\Accountant\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\BrandController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
@@ -170,6 +171,7 @@
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\Controllers\SubCategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\SupplierController.cs" />
+    <Compile Include="Areas\Depot\Controllers\HomeController.cs" />
     <Compile Include="Areas\Depot\DepotAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -229,6 +231,7 @@
     <Content Include="Views\Home\BillingDetails.cshtml" />
     <Content Include="Views\Home\Checkout.cshtml" />
     <Content Include="Views\Home\OrderComplete.cshtml" />
+    <Content Include="Views\Home\UserOrders.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -238,13 +241,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Accountant\Controllers\" />
     <Folder Include="Areas\Accountant\Data\" />
+    <Folder Include="Areas\Accountant\Views\Home\" />
     <Folder Include="Areas\Accountant\Views\Shared\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Views\Product\" />
-    <Folder Include="Areas\Depot\Controllers\" />
     <Folder Include="Areas\Depot\Data\" />
+    <Folder Include="Areas\Depot\Views\Home\" />
     <Folder Include="Areas\Depot\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
