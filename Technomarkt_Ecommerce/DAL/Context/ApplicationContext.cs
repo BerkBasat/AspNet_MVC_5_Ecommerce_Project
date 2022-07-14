@@ -11,7 +11,6 @@ namespace DAL.Context
 {
     public class ApplicationContext:DbContext
     {
-        //todo: Supplier Orders(tedarikçiden temin edilen ürünler) daha sonra eklenecek!
 
         public ApplicationContext()
         {

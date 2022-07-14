@@ -23,22 +23,35 @@
                                 <a class="nav-link active" aria-current="page" href="/admin/home">Admin</a>
                             </li>
                         }
-                        @if (Session["login"] == null)
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/Home/Login">Login</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/Home/Register">Register</a>
-                            </li>
-                        }
-                        else
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/Home/Logout">Logout</a>
-                            </li>
-                        }
 
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                My Account
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                @if (Session["login"] == null)
+                                {
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="/Home/Login" style="color:black;">Login</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="/Home/Register" style="color:black;">Register</a>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="/Home/Logout" style="color:black;">Logout</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#" style="color:black;">Orders</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#" style="color:black;">Account</a>
+                                    </li>
+                                }
+                            </ul>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Categories

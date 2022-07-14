@@ -13,10 +13,12 @@ namespace UI.Controllers
 {
     public class HomeController : Controller
     {
-        //todo: Fix layout!
-        //todo: Add user roles
-        //todo: Create accountant and depot areas
-        //todo: User authentication
+        //todo: Fix layout! (NOT THE PRIORITY!!!)
+        //todo: Create a cart controller and put the cart, billing, payment views in that!
+        //todo: Create user account page
+        //todo: Create user order page
+        //todo: Create supplier orders!
+        //todo: Create paypal getaway!
 
         ProductService productService = new ProductService();
         SubCategoryService subCategoryService = new SubCategoryService();
@@ -101,6 +103,15 @@ namespace UI.Controllers
             Session.Remove("login");
             return RedirectToAction("Index");
         }
+
+        //List orders that belongs to the current user
+        public ActionResult UserOrders()
+        {
+            var currentUserId = appUserService.GetDefault(x => x.Username == System.Web.HttpContext.Current.User.Identity.Name).FirstOrDefault().ID;
+            var userOrders = orderService.GetDefault(x => x.ID == currentUserId).ToList();
+            return View(userOrders);
+        }
+
 
         public ActionResult ProductDetails(Guid id)
         {
