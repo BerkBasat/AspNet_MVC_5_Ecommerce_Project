@@ -13,12 +13,14 @@ namespace UI.Controllers
 {
     public class HomeController : Controller
     {
-        //todo: Fix layout! (NOT THE PRIORITY!!!)
         //todo: Create a cart controller and put the cart, billing, payment views in that!
         //todo: Create user account page
         //todo: Create user order page
         //todo: Create supplier orders!
         //todo: Create paypal getaway!
+        //todo: Create user comments
+        //todo: Product image disappears when updating product, fix it!
+        //todo: Fix layout! (NOT THE PRIORITY!!!)
 
         ProductService productService = new ProductService();
         SubCategoryService subCategoryService = new SubCategoryService();

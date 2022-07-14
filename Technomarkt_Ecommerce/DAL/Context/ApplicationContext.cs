@@ -37,6 +37,7 @@ namespace DAL.Context
             modelBuilder.Configurations.Add(new SupplierMap());
             modelBuilder.Configurations.Add(new AppUserMap());
             modelBuilder.Configurations.Add(new BrandMap());
+            modelBuilder.Configurations.Add(new OrderMap());
 
             modelBuilder.Entity<AppUserAndRole>().HasKey(x => new
             {

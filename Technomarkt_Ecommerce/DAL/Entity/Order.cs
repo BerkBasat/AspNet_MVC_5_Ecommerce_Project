@@ -12,7 +12,7 @@ namespace DAL.Entity
     {
         public Order()
         {
-            OrderDate = DateTime.Now;
+            OrderDate = DateTime.Now.ToString("dddd, dd MMMM yyyy");
             OrderStatus = OrderStatus.Processing;
         }
 
@@ -20,8 +20,8 @@ namespace DAL.Entity
         public AppUser AppUser { get; set; }
         public int OrderNo { get; set; }
         public OrderStatus OrderStatus { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public DateTime? DeliveryDate { get; set; }
+        public string OrderDate { get; set; }
+        public string DeliveryDate { get; set; }
 
         public virtual List<OrderDetail> OrderDetails { get; set; }
 

@@ -66,6 +66,7 @@
     <Compile Include="Map\AppUserMap.cs" />
     <Compile Include="Map\BrandMap.cs" />
     <Compile Include="Map\CategoryMap.cs" />
+    <Compile Include="Map\OrderMap.cs" />
     <Compile Include="Map\ProductMap.cs" />
     <Compile Include="Map\SubCategoryMap.cs" />
     <Compile Include="Map\SupplierMap.cs" />
