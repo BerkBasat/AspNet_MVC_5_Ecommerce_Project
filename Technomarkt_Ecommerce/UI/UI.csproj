@@ -153,6 +153,12 @@
     <Content Include="Areas\Admin\Views\Home\Update.cshtml" />
     <Content Include="Areas\Accountant\Views\web.config" />
     <Content Include="Areas\Depot\Views\web.config" />
+    <Content Include="Areas\Accountant\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Accountant\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Accountant\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Depot\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Depot\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Depot\Views\Home\Index.cshtml" />
     <None Include="Scripts\jquery-3.6.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
@@ -242,13 +248,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Accountant\Data\" />
-    <Folder Include="Areas\Accountant\Views\Home\" />
-    <Folder Include="Areas\Accountant\Views\Shared\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Views\Product\" />
     <Folder Include="Areas\Depot\Data\" />
-    <Folder Include="Areas\Depot\Views\Home\" />
-    <Folder Include="Areas\Depot\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj">

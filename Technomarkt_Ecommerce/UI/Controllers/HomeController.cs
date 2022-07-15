@@ -20,7 +20,6 @@ namespace UI.Controllers
         //todo: Create paypal getaway!
         //todo: Create user comments
         //todo: Product image disappears when updating product, fix it!
-        //todo: Fix layout! (NOT THE PRIORITY!!!)
 
         ProductService productService = new ProductService();
         SubCategoryService subCategoryService = new SubCategoryService();
@@ -95,6 +94,13 @@ namespace UI.Controllers
 
         public ActionResult Logout()
         {
+            //Remove all cookies
+            string[] cookies = Request.Cookies.AllKeys;
+            foreach(string cookie in cookies)
+            {
+                Response.Cookies[cookie].Expires = DateTime.Now.AddDays(-1);
+            }
+
             Session.Remove("login");
             return RedirectToAction("Index");
         }

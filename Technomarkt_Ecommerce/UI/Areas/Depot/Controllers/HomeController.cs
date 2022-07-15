@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Service.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,12 @@ namespace UI.Areas.Depot.Controllers
 {
     public class HomeController : Controller
     {
+        OrderService orderService = new OrderService();
+
         // GET: Depot/Home
         public ActionResult Index()
         {
-            return View();
+            return View(orderService.GetList());
         }
     }
 }

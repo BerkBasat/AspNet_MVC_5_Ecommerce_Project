@@ -10,6 +10,8 @@ namespace DAL.Enums
     {
         Processing,
         Shipping,
-        Delivered
+        Delivered,
+        Cancelled,
+        Refunded
     }
 }
