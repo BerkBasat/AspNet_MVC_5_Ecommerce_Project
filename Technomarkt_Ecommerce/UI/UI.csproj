@@ -180,6 +180,7 @@
     <Compile Include="Areas\Depot\Controllers\HomeController.cs" />
     <Compile Include="Areas\Depot\DepotAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -238,6 +239,7 @@
     <Content Include="Views\Home\Checkout.cshtml" />
     <Content Include="Views\Home\OrderComplete.cshtml" />
     <Content Include="Views\Home\UserOrders.cshtml" />
+    <Content Include="Views\Order\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

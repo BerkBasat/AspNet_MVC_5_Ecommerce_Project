@@ -14,11 +14,10 @@ namespace UI.Controllers
     public class HomeController : Controller
     {
         //todo: Create a cart controller and put the cart, billing, payment views in that!
-        //todo: Create user account page
-        //todo: Create user order page
         //todo: Create supplier orders!
         //todo: Create paypal getaway!
         //todo: Create user comments
+        //todo: Add SMS sender!
         //todo: Product image disappears when updating product, fix it!
 
         ProductService productService = new ProductService();
@@ -105,14 +104,6 @@ namespace UI.Controllers
             return RedirectToAction("Index");
         }
 
-        //List orders that belongs to the current user
-        public ActionResult UserOrders()
-        {
-            var currentUserId = appUserService.GetDefault(x => x.Username == System.Web.HttpContext.Current.User.Identity.Name).FirstOrDefault().ID;
-            var userOrders = orderService.GetDefault(x => x.ID == currentUserId).ToList();
-            return View(userOrders);
-        }
-
 
         public ActionResult ProductDetails(Guid id)
         {
@@ -174,6 +165,7 @@ namespace UI.Controllers
             return RedirectToAction("MyCart");
         }
 
+        #region Will be transferred to cart controller later!!!
         public ActionResult MyCart()
         {
             if (Session["cart"] != null)
@@ -249,6 +241,7 @@ namespace UI.Controllers
 
             return View(orderDetailList);
         }
+        #endregion
 
         //Wishlist
 

@@ -23,6 +23,18 @@
                                 <a class="nav-link active" aria-current="page" href="/admin/home">Admin</a>
                             </li>
                         }
+                        @if (User.IsInRole("accountant"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/accountant/home">Accountant</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("depot"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/depot/home">Depot</a>
+                            </li>
+                        }
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

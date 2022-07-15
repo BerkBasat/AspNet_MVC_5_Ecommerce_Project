@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace UI.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class ProductController : Controller
     {
         // GET: Admin/Product

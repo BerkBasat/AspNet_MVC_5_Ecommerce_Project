@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace UI.Areas.Accountant.Controllers
 {
+    [Authorize(Roles = "accountant")]
     public class HomeController : Controller
     {
         OrderService orderService = new OrderService();
