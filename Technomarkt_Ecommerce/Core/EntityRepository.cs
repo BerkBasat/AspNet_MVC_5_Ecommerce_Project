@@ -1,6 +1,7 @@
 ﻿using Core.Enums;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace Core
         public EntityRepository()
         {
             Status = Status.Active;
-            CreatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy");
+            CreatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy", new CultureInfo("en-GB")); //Change datetime format to English
             CreatedComputerName = Environment.MachineName;
             CreatedIP = "192.168.31.146";//Use a method to get ip later!
             CreatedAdUsername = "Admin";

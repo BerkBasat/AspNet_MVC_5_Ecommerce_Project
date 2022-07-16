@@ -16,7 +16,7 @@ namespace UI.Controllers
         public ActionResult Index()
         {
             var currentUserId = appUserService.GetDefault(x => x.Username == System.Web.HttpContext.Current.User.Identity.Name).FirstOrDefault().ID;
-            var userOrders = orderService.GetDefault(x => x.ID == currentUserId).ToList();
+            var userOrders = orderService.GetDefault(x => x.AppUserID == currentUserId).ToList();
             return View(userOrders);
         }
     }

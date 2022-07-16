@@ -2,6 +2,7 @@
 using DAL.Enums;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ namespace DAL.Entity
     {
         public Order()
         {
-            OrderDate = DateTime.Now.ToString("dddd, dd MMMM yyyy");
+            OrderDate = DateTime.Now.ToString("dddd, dd MMMM yyyy", new CultureInfo("en-GB"));
             OrderStatus = OrderStatus.Processing;
         }
 
