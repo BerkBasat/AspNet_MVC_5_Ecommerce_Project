@@ -5,6 +5,21 @@
 }
 
 <div class="row" style="margin-bottom:15em;">
+    @{if (TempData["info"] != null)
+        {
+            <div class="alert alert-success" role="alert">
+                @TempData["info"]
+            </div>
+        }
+        if (TempData["error"] != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                @TempData["error"]
+            </div>
+        }
+
+    }
+
     @foreach (var order in Model)
     {
         <div class="col-md-6 mx-auto mt-5">
@@ -72,11 +87,11 @@
                         <button type="button" class="btn btn-sm btn-primary mt-2 me-2">Details</button>
                         @if (order.OrderStatus == DAL.Enums.OrderStatus.Processing)
                         {
-                            <button type="button" class="btn btn-sm btn-danger mt-2 me-2">Cancel</button>
+                            @Html.ActionLink("Cancel", "Cancel", new { id = order.ID }, new { @class = "btn btn-sm btn-danger mt-2 me-2" })
                         }
                         @if (order.OrderStatus == DAL.Enums.OrderStatus.Delivered)
                         {
-                            <button type="button" class="btn btn-sm btn-danger mt-2 me-2">Refund</button>
+                            @Html.ActionLink("Refund", "Refund", new { id = order.ID }, new { @class = "btn btn-sm btn-danger mt-2 me-2" })
                         }
                     </div>
                 </div>

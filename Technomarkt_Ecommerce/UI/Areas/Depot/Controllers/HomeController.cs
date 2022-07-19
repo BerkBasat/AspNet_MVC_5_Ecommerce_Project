@@ -17,5 +17,33 @@ namespace UI.Areas.Depot.Controllers
         {
             return View(orderService.GetList());
         }
+
+        public ActionResult SendToCargo(Guid id)
+        {
+            try
+            {
+                TempData["info"] = orderService.ShipOrder(id);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                TempData["error"] = ex.Message;
+                return RedirectToAction("Index"); 
+            }
+        }
+
+        public ActionResult Deliver(Guid id)
+        {
+            try
+            {
+                TempData["info"] = orderService.DeliverOrder(id);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                TempData["error"] = ex.Message;
+                return RedirectToAction("Index");
+            }
+        }
     }
 }

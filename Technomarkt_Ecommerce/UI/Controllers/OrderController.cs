@@ -19,5 +19,33 @@ namespace UI.Controllers
             var userOrders = orderService.GetDefault(x => x.AppUserID == currentUserId).ToList();
             return View(userOrders);
         }
+
+        public ActionResult Cancel(Guid id)
+        {
+            try
+            {
+                TempData["info"] = orderService.CancelOrder(id);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                TempData["error"] = ex.Message;
+                return RedirectToAction("Index");
+            }
+        }
+
+        public ActionResult Refund(Guid id)
+        {
+            try
+            {
+                TempData["info"] = orderService.RefundOrder(id);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                TempData["error"] = ex.Message;
+                return RedirectToAction("Index");
+            }
+        }
     }
 }

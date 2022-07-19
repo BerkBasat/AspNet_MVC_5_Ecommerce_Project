@@ -3,6 +3,7 @@ using DAL.Entity;
 using Service.Base;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,6 +46,7 @@ namespace Service.Concrete
             {
                 Order delivered = GetById(id);
                 delivered.OrderStatus = DAL.Enums.OrderStatus.Delivered;
+                delivered.DeliveryDate = DateTime.Now.ToString("dddd, dd MMMM yyyy", new CultureInfo("en-GB"));
                 Update(delivered);
                 return "Order delivered!";
             }
