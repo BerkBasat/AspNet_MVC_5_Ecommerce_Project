@@ -18,7 +18,6 @@ namespace UI.Controllers
         //todo: Create paypal getaway!
         //todo: Create user comments
         //todo: Add SMS sender!
-        //todo: Product image disappears when updating product, fix it!
 
         ProductService productService = new ProductService();
         SubCategoryService subCategoryService = new SubCategoryService();

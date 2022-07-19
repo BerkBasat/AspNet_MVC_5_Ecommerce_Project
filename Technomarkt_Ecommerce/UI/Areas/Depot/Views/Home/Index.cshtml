@@ -24,6 +24,11 @@
 
         }
 
+        <div class="text-center" style="margin-top:50px;">
+            <label>Search: </label>
+            <input placeholder="Order No" />
+        </div>
+
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -37,46 +42,46 @@
             <tbody>
                 @foreach (var order in Model)
                 {
-                <tr>
-                    <td>@order.OrderNo</td>
-                    <td>@order.OrderDate</td>
-                    @if (order.OrderStatus == DAL.Enums.OrderStatus.Delivered)
-                    {
-                        <td>@order.DeliveryDate</td>
-                    }
-                    else
-                    {
-                        <td>-</td>
-                    }
-                    <td>
-                        @switch (order.OrderStatus)
+                    <tr>
+                        <td>@order.OrderNo</td>
+                        <td>@order.OrderDate</td>
+                        @if (order.OrderStatus == DAL.Enums.OrderStatus.Delivered)
                         {
-                            case DAL.Enums.OrderStatus.Processing:
-                                <span class="badge bg-info">@order.OrderStatus.ToString()</span>
-                                break;
-                            case DAL.Enums.OrderStatus.Shipping:
-                                <span class="badge bg-warning">@order.OrderStatus.ToString()</span>
-                                break;
-                            case DAL.Enums.OrderStatus.Delivered:
-                                <span class="badge bg-success">@order.OrderStatus.ToString()</span>
-                                break;
-                            case DAL.Enums.OrderStatus.Cancelled:
-                                <span class="badge bg-danger">@order.OrderStatus.ToString()</span>
-                                break;
-                            case DAL.Enums.OrderStatus.Refunded:
-                                <span class="badge bg-danger">@order.OrderStatus.ToString()</span>
-                                break;
+                            <td>@order.DeliveryDate</td>
                         }
-                    </td>
-                    @if (order.OrderStatus == DAL.Enums.OrderStatus.Processing)
-                    {
-                        <td>@Html.ActionLink("Send to Cargo", "SendToCargo", new { id = order.ID }, new { @class = "btn btn-sm btn-primary mt-2 me-2" })</td>
-                    }
-                    @if (order.OrderStatus == DAL.Enums.OrderStatus.Shipping)
-                    {
-                        <td>@Html.ActionLink("Deliver Order", "Deliver", new { id = order.ID }, new { @class = "btn btn-sm btn-success mt-2 me-2" })</td>
-                    }
-                </tr>
+                        else
+                        {
+                            <td>-</td>
+                        }
+                        <td>
+                            @switch (order.OrderStatus)
+                            {
+                                case DAL.Enums.OrderStatus.Processing:
+                                    <span class="badge bg-info">@order.OrderStatus.ToString()</span>
+                                    break;
+                                case DAL.Enums.OrderStatus.Shipping:
+                                    <span class="badge bg-warning">@order.OrderStatus.ToString()</span>
+                                    break;
+                                case DAL.Enums.OrderStatus.Delivered:
+                                    <span class="badge bg-success">@order.OrderStatus.ToString()</span>
+                                    break;
+                                case DAL.Enums.OrderStatus.Cancelled:
+                                    <span class="badge bg-danger">@order.OrderStatus.ToString()</span>
+                                    break;
+                                case DAL.Enums.OrderStatus.Refunded:
+                                    <span class="badge bg-danger">@order.OrderStatus.ToString()</span>
+                                    break;
+                            }
+                        </td>
+                        @if (order.OrderStatus == DAL.Enums.OrderStatus.Processing)
+                        {
+                            <td>@Html.ActionLink("Send to Cargo", "SendToCargo", new { id = order.ID }, new { @class = "btn btn-sm btn-primary mt-2 me-2" })</td>
+                        }
+                        @if (order.OrderStatus == DAL.Enums.OrderStatus.Shipping)
+                        {
+                            <td>@Html.ActionLink("Deliver Order", "Deliver", new { id = order.ID }, new { @class = "btn btn-sm btn-success mt-2 me-2" })</td>
+                        }
+                    </tr>
                 }
             </tbody>
         </table>
