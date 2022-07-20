@@ -169,6 +169,12 @@ div h2 {
         font-weight: 600;
     }
 
+/* Product Page */
+
+#product-page{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
 
 
 /* Footer Section */

@@ -181,6 +181,7 @@
     <Compile Include="Areas\Admin\Controllers\SupplierController.cs" />
     <Compile Include="Areas\Depot\Controllers\HomeController.cs" />
     <Compile Include="Areas\Depot\DepotAreaRegistration.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Global.asax.cs">
@@ -242,6 +243,10 @@
     <Content Include="Views\Home\OrderComplete.cshtml" />
     <Content Include="Views\Home\UserOrders.cshtml" />
     <Content Include="Views\Order\Index.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Cart\OrderComplete.cshtml" />
+    <Content Include="Views\Cart\Checkout.cshtml" />
+    <Content Include="Views\Cart\BillingDetails.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

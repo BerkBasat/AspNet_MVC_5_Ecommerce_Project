@@ -13,7 +13,6 @@ namespace UI.Controllers
 {
     public class HomeController : Controller
     {
-        //todo: Create a cart controller and put the cart, billing, payment views in that!
         //todo: Create supplier orders!
         //todo: Create paypal getaway!
         //todo: Create user comments
@@ -152,95 +151,95 @@ namespace UI.Controllers
             }
         }
 
-        public ActionResult DeleteCartItem(Guid id)
-        {
-            Cart cart = Session["cart"] as Cart;
+        //public ActionResult DeleteCartItem(Guid id)
+        //{
+        //    Cart cart = Session["cart"] as Cart;
 
-            if(cart != null)
-            {
-                cart.DeleteItem(id);
-            }
+        //    if(cart != null)
+        //    {
+        //        cart.DeleteItem(id);
+        //    }
 
-            return RedirectToAction("MyCart");
-        }
+        //    return RedirectToAction("MyCart");
+        //}
 
-        #region Will be transferred to cart controller later!!!
-        public ActionResult MyCart()
-        {
-            if (Session["cart"] != null)
-            {
-                return View();
-            }
-            else
-            {
-                TempData["error"] = "Your cart is empty!";
-                return RedirectToAction("Index");
-            }
-        }
+        //#region Will be transferred to cart controller later!!!
+        //public ActionResult MyCart()
+        //{
+        //    if (Session["cart"] != null)
+        //    {
+        //        return View();
+        //    }
+        //    else
+        //    {
+        //        TempData["error"] = "Your cart is empty!";
+        //        return RedirectToAction("Index");
+        //    }
+        //}
 
-        public ActionResult BillingDetails()
-        {
-            return View();
-        }
+        //public ActionResult BillingDetails()
+        //{
+        //    return View();
+        //}
 
-        public ActionResult Checkout()
-        {
-            return View();
-        }
+        //public ActionResult Checkout()
+        //{
+        //    return View();
+        //}
 
-        public ActionResult OrderComplete()
-        {
-            Cart cart = Session["cart"] as Cart;
-            AppUser user = Session["login"] as AppUser;
+        //public ActionResult OrderComplete()
+        //{
+        //    Cart cart = Session["cart"] as Cart;
+        //    AppUser user = Session["login"] as AppUser;
 
-            List<OrderDetail> orderDetailList = new List<OrderDetail>();
-
-
-            if (cart != null)
-            {
-
-                Random rnd = new Random();
-                string productList = "";
-
-                Order order = new Order();
-                order.AppUserID = user.ID;
-                order.OrderNo = rnd.Next(1000, 100000);
-                Order result = orderService.Add(order);
-
-                foreach (var item in cart.myCart)
-                {
-
-                    OrderDetail orderDetail = new OrderDetail();
-                    orderDetail.OrderId = result.ID;
-                    orderDetail.ProductId = item.Id;
-                    orderDetail.ProductImage = item.ProductImage;
-                    orderDetail.ProductName = item.ProductName;
-                    orderDetail.UnitPrice = (decimal)item.Price;
-                    orderDetail.Quantity = item.Quantity;
-                    orderDetail.SubTotal = (decimal)item.SubTotal;
-
-                    orderDetailList.Add(orderDetail);
-                    orderDetailService.Add(orderDetail);
-
-                    Product product = productService.GetById(item.Id);
-                    product.UnitsInStock -= Convert.ToInt16(item.Quantity);
-
-                    productList = $"Product: {item.ProductName} - Price: {item.Price} - Total: {item.SubTotal}";
-                }
+        //    List<OrderDetail> orderDetailList = new List<OrderDetail>();
 
 
-                //string content = $"We have received your order. Order No: {order.OrderNo}\tYour order: {productList}";
-                //MailSender.SendEmail(user.Email, "Order Info", content);
+        //    if (cart != null)
+        //    {
 
-                Session.Remove("cart");
+        //        Random rnd = new Random();
+        //        string productList = "";
 
-                orderDetailList = orderDetailService.GetDefault(x => x.OrderId == result.ID);
+        //        Order order = new Order();
+        //        order.AppUserID = user.ID;
+        //        order.OrderNo = rnd.Next(1000, 100000);
+        //        Order result = orderService.Add(order);
 
-            }
+        //        foreach (var item in cart.myCart)
+        //        {
 
-            return View(orderDetailList);
-        }
-        #endregion
+        //            OrderDetail orderDetail = new OrderDetail();
+        //            orderDetail.OrderId = result.ID;
+        //            orderDetail.ProductId = item.Id;
+        //            orderDetail.ProductImage = item.ProductImage;
+        //            orderDetail.ProductName = item.ProductName;
+        //            orderDetail.UnitPrice = (decimal)item.Price;
+        //            orderDetail.Quantity = item.Quantity;
+        //            orderDetail.SubTotal = (decimal)item.SubTotal;
+
+        //            orderDetailList.Add(orderDetail);
+        //            orderDetailService.Add(orderDetail);
+
+        //            Product product = productService.GetById(item.Id);
+        //            product.UnitsInStock -= Convert.ToInt16(item.Quantity);
+
+        //            productList = $"Product: {item.ProductName} - Price: {item.Price} - Total: {item.SubTotal}";
+        //        }
+
+
+        //        //string content = $"We have received your order. Order No: {order.OrderNo}\tYour order: {productList}";
+        //        //MailSender.SendEmail(user.Email, "Order Info", content);
+
+        //        Session.Remove("cart");
+
+        //        orderDetailList = orderDetailService.GetDefault(x => x.OrderId == result.ID);
+
+        //    }
+
+        //    return View(orderDetailList);
+        //}
+        //#endregion
 
         //Wishlist
 

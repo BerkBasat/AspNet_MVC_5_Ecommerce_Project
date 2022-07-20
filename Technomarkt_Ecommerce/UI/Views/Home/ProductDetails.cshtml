@@ -13,6 +13,10 @@
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <h3>@Model.ProductName</h3>
                 <h3>$@Model.UnitPrice</h3>
+                @if (Model.UnitsInStock < 100)
+                {
+                    <p style="color:red">Only a limited amount left in stocks!</p>
+                }
                 <h5>Category: @Model.SubCategory.Category.CategoryName</h5>
                 <p>@Model.Description</p>
                 <div class="row mt-2">
