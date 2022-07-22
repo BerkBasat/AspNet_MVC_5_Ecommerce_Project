@@ -247,6 +247,7 @@
     <Content Include="Views\Cart\OrderComplete.cshtml" />
     <Content Include="Views\Cart\Checkout.cshtml" />
     <Content Include="Views\Cart\BillingDetails.cshtml" />
+    <Content Include="Views\Order\OrderDetails.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -176,6 +176,18 @@ div h2 {
     margin-bottom: 80px;
 }
 
+/* Order Detail Page */
+
+#order-details {
+    margin: 50px;
+    font-family: Roboto,sans-serif;
+    font-weight:bold;
+}
+
+    #order-details h5{
+        font-size: 50px;
+    }
+
 
 /* Footer Section */
 
@@ -237,4 +249,8 @@ div h2 {
 }
 
 
-
+/*Error Message Style*/
+.field-validation-error{
+    color:red;
+    font-weight:bold;
+}

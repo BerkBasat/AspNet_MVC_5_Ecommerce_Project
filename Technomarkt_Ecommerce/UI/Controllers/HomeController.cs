@@ -22,8 +22,6 @@ namespace UI.Controllers
         SubCategoryService subCategoryService = new SubCategoryService();
         BrandService brandService = new BrandService();
         AppUserService appUserService = new AppUserService();
-        OrderService orderService = new OrderService();
-        OrderDetailService orderDetailService = new OrderDetailService();
 
 
         public ActionResult Index()

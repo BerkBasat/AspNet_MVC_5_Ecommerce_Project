@@ -14,7 +14,7 @@ namespace UI.Utils
 
             //Sender
             MailMessage sender = new MailMessage();
-            sender.From = new MailAddress("yzl3156yzl@gmail.com", "YZL3156");
+            sender.From = new MailAddress("emailexample581@gmail.com", "Password--2.");
             sender.To.Add(email);
             sender.Subject = subject;
             sender.Body = message;
@@ -23,7 +23,7 @@ namespace UI.Utils
             //Smtp
             SmtpClient smtp = new SmtpClient();
             smtp.UseDefaultCredentials = false;
-            smtp.Credentials = new NetworkCredential("yzl3156yzl@gmail.com", "Yzl3156--");
+            smtp.Credentials = new NetworkCredential("emailexample581@gmail.com", "Password--2.");
             smtp.Port = 587;
             smtp.Host = "smtp.google.com";
             smtp.EnableSsl = true;
