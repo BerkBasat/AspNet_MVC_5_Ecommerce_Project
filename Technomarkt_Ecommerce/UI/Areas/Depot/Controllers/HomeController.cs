@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using UI.CustomFilters;
 
 namespace UI.Areas.Depot.Controllers
 {
     [Authorize(Roles = "depot")]
+    [AuthFilter]
     public class HomeController : Controller
     {
         OrderService orderService = new OrderService();

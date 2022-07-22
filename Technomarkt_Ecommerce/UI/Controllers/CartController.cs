@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using DAL.Entity;
 using Service.Concrete;
+using UI.CustomFilters;
 using UI.Models;
 using UI.Utils;
 
@@ -30,16 +31,19 @@ namespace UI.Controllers
             }
         }
 
+        [AuthFilter]
         public ActionResult BillingDetails()
         {
             return View();
         }
 
+        [AuthFilter]
         public ActionResult Checkout()
         {
             return View();
         }
 
+        [AuthFilter]
         public ActionResult OrderComplete()
         {
             Cart cart = Session["cart"] as Cart;
