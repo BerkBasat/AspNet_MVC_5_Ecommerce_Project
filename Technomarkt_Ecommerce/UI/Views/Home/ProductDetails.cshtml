@@ -17,8 +17,8 @@
                 {
                     <p style="color:red">Only a limited amount left in stocks!</p>
                 }
-                <h5>Category: @Model.SubCategory.Category.CategoryName</h5>
-                <p>@Model.Description</p>
+                <h5>Category: @Model.SubCategory.Category.CategoryName, @Model.SubCategory.SubCategoryName</h5>
+                <p style="margin-top: 30px; margin-bottom:30px;">@Model.Description</p>
                 <div class="row mt-2">
                     @Html.ActionLink("Add to Cart", "AddToCart", "Home", new { id = Model.ID }, new { @class = "btn btn-dark" })
                 </div>
