@@ -13,10 +13,12 @@ namespace UI.Areas.Accountant.Controllers
     public class HomeController : Controller
     {
         OrderService orderService = new OrderService();
+        OrderDetailService orderDetailService = new OrderDetailService();
 
         // GET: Accountant/Home
         public ActionResult Index()
         {
+            ViewBag.OrderSum = orderDetailService.OrderIncome();
             return View(orderService.GetList());
         }
     }

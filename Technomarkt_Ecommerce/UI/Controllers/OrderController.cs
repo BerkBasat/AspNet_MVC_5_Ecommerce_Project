@@ -1,4 +1,5 @@
-﻿using Service.Concrete;
+﻿using DAL.Entity;
+using Service.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,7 @@ namespace UI.Controllers
         {
             var currentUserId = appUserService.GetDefault(x => x.Username == System.Web.HttpContext.Current.User.Identity.Name).FirstOrDefault().ID;
             var userOrders = orderService.GetDefault(x => x.AppUserID == currentUserId).ToList();
+
             return View(userOrders);
         }
 

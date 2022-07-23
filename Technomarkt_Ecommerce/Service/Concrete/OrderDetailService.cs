@@ -11,6 +11,13 @@ namespace Service.Concrete
 {
     public class OrderDetailService : BaseService<OrderDetail>
     {
-        
+        ApplicationContext db = new ApplicationContext();
+
+        public decimal? OrderIncome()
+        {
+            //Exclude the refunded orders later!!
+            var total = db.OrderDetails.Sum(x => x.SubTotal);
+            return total;
+        }
     }
 }
