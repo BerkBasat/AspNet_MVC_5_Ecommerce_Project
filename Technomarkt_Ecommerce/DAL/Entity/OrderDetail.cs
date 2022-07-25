@@ -9,6 +9,7 @@ namespace DAL.Entity
 {
     public class OrderDetail : EntityRepository
     {
+
         public Guid OrderId { get; set; }
         public Guid ProductId { get; set; }
         public string ProductImage { get; set; }

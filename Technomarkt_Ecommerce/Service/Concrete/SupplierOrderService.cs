@@ -13,10 +13,10 @@ namespace Service.Concrete
     {
         ApplicationContext db = new ApplicationContext();
 
-        public Order Add(Order model)
+        public SupplierOrder Add(SupplierOrder model)
         {
             model.ID = Guid.NewGuid();
-            var result = db.Set<Order>().Add(model);
+            var result = db.Set<SupplierOrder>().Add(model);
             db.SaveChanges();
 
             return result;

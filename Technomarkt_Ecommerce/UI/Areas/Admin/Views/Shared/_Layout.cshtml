@@ -23,6 +23,26 @@
                         <a class="nav-link active" aria-current="page" href="~/Admin/SubCategory/Index">SubCategories</a>
                         <a class="nav-link active" aria-current="page" href="~/Admin/Supplier/Index">Suppliers</a>
                         <a class="nav-link active" aria-current="page" href="~/Admin/Order/Index">Orders</a>
+                        <a class="nav-link active" aria-current="page" href="~/Admin/SupplierOrder/Index">Supplier Orders</a>
+                        <form class="d-flex">
+                            <a class="btn btn-outline-warning" href="/Admin/Home/AdminCart">
+                                Cart
+                                <span class="badge bg-warning text-black ms-1 rounded-pill">
+                                    @{
+                                        if (Session["cart"] != null)
+                                        {
+                                            UI.Models.Cart cart = Session["cart"] as UI.Models.Cart;
+                                            <span>@cart.myCart.Count</span>
+                                        }
+                                        else
+                                        {
+                                            <span>0</span>
+                                        }
+
+                                    }
+                                </span>
+                            </a>
+                        </form>
                     </div>
                 </div>
             </div>

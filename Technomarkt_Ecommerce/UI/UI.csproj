@@ -160,6 +160,11 @@
     <Content Include="Areas\Depot\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Depot\Views\Home\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Order\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\AdminCart.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\BillingDetails.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Checkout.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\OrderComplete.cshtml" />
+    <Content Include="Areas\Admin\Views\SupplierOrder\Index.cshtml" />
     <None Include="Scripts\jquery-3.6.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
@@ -179,6 +184,7 @@
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\Controllers\SubCategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\SupplierController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SupplierOrderController.cs" />
     <Compile Include="Areas\Depot\Controllers\HomeController.cs" />
     <Compile Include="Areas\Depot\DepotAreaRegistration.cs" />
     <Compile Include="Controllers\CartController.cs" />

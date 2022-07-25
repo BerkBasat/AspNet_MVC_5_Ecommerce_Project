@@ -13,9 +13,7 @@ namespace UI.Controllers
 {
     public class HomeController : Controller
     {
-        //todo: Create supplier orders!
         //todo: Create paypal getaway!
-        //todo: Create user comments
         //todo: Add SMS sender!
 
         ProductService productService = new ProductService();
