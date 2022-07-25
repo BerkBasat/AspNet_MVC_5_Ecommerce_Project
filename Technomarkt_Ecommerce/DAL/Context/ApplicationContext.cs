@@ -27,6 +27,11 @@ namespace DAL.Context
         public DbSet<Order> Orders { get; set; }
         public DbSet<AppUserAndRole> AppUserAndRoles { get; set; }
         public DbSet<AppUserRole> AppUserRoles { get; set; }
+        public DbSet<UserComment> UserComments { get; set; }
+        public DbSet<UserAndComment> UserAndComments { get; set; }
+        public DbSet<SupplierOrder> SupplierOrders { get; set; }
+        public DbSet<SupplierOrderDetail> SupplierOrderDetails { get; set; }
+
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -43,6 +48,13 @@ namespace DAL.Context
             {
                 x.AppUserId,
                 x.AppUserRoleId
+            });
+
+            modelBuilder.Entity<UserAndComment>().HasKey(x => new
+            {
+                x.AppUserId,
+                x.UserCommentId,
+                x.ProductId
             });
 
             base.OnModelCreating(modelBuilder);

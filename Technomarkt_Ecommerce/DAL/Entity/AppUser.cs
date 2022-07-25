@@ -18,5 +18,6 @@ namespace DAL.Entity
         public string Password { get; set; }
 
         public virtual List<AppUserAndRole> AppUserAndRoles { get; set; }
+        public virtual List<UserAndComment> UserAndComments { get; set; }
     }
 }

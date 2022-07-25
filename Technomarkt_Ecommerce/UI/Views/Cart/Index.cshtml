@@ -25,16 +25,16 @@
                         @foreach (var item in cart.myCart.ToList())
                         {
                             totalPrice += item.SubTotal;
-                            <tr>
-                                <td width="50px">
-                                    <img src="~/Content/img/@item.ProductImage" style="width:auto; height:70px" />
-                                </td>
-                                <td>@item.ProductName</td>
-                                <td>@item.Quantity</td>
-                                <td>$@item.Price</td>
-                                <td>$@item.SubTotal</td>
-                                <td>@Html.ActionLink("Delete", "DeleteCartItem", new { id = item.Id }, new { @class = "btn btn-danger" })</td>
-                            </tr>
+                        <tr>
+                            <td width="50px">
+                                <img src="~/Content/img/@item.ProductImage" style="width:auto; height:70px" />
+                            </td>
+                            <td>@item.ProductName</td>
+                            <td>@item.Quantity</td>
+                            <td>$@item.Price</td>
+                            <td>$@item.SubTotal</td>
+                            <td>@Html.ActionLink("Delete", "DeleteCartItem", new { id = item.Id }, new { @class = "btn btn-danger" })</td>
+                        </tr>
                         }
                     </tbody>
                 </table>

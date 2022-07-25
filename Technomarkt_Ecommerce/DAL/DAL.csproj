@@ -62,6 +62,10 @@
     <Compile Include="Entity\Product.cs" />
     <Compile Include="Entity\SubCategory.cs" />
     <Compile Include="Entity\Supplier.cs" />
+    <Compile Include="Entity\SupplierOrder.cs" />
+    <Compile Include="Entity\SupplierOrderDetail.cs" />
+    <Compile Include="Entity\UserAndComment.cs" />
+    <Compile Include="Entity\UserComment.cs" />
     <Compile Include="Enums\OrderStatus.cs" />
     <Compile Include="Map\AppUserMap.cs" />
     <Compile Include="Map\BrandMap.cs" />
@@ -70,6 +74,8 @@
     <Compile Include="Map\ProductMap.cs" />
     <Compile Include="Map\SubCategoryMap.cs" />
     <Compile Include="Map\SupplierMap.cs" />
+    <Compile Include="Map\SupplierOrderMap.cs" />
+    <Compile Include="Map\UserCommentMap.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
