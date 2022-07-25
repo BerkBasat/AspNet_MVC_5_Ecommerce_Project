@@ -27,32 +27,41 @@
 /*Carousel*/
 
 #carousel {
-    margin-top:20px;
+    width: 65em;
+    margin: auto;
 }
 
 #carousel img {
-    width: 35%;
-    height: 100vh;
+    height: 35em;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 #carousel .carousel-caption-1{
-    margin-bottom:11em;
     font-family: Roboto, sans-serif;
     font-size: 3em;
     font-weight:bold;  
+    margin-bottom:8em;
 }
 
 #carousel .carousel-caption-2{
     font-family: Roboto, sans-serif;
     font-size: 3em;
+    color: red;
     font-weight:bold;
-    text-align:left;
-    margin-bottom:11em;
+    text-align:right;
+    margin-bottom:2em;
 }
 
+
+#carousel .carousel-caption-3 {
+    font-family: Roboto, sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom:5em;
+}
 
 
 div h2 {
@@ -257,4 +266,52 @@ div h2 {
 .field-validation-error{
     color:red;
     font-weight:bold;
+}
+
+
+/* Media Queries */
+
+
+/* Carousel */
+
+@media (max-width: 800px) {
+    #carousel img {
+        height: 25em;
+    }
+}
+
+@media (max-width: 485px) {
+    #carousel img {
+        height: 20em;
+    }
+}
+
+@media (max-width: 1060px) {
+    #carousel {
+        width: 50em;
+    }
+}
+
+@media (max-width: 800px) {
+    #carousel {
+        width: 40em;
+    }
+}
+
+@media (max-width: 645px) {
+    #carousel {
+        width: 30em;
+    }
+}
+
+@media (max-width: 485px) {
+    #carousel {
+        width: 25em;
+    }
+}
+
+@media (max-width: 400px) {
+    #carousel {
+        width: 22em;
+    }
 }
