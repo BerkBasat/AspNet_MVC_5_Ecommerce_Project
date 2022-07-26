@@ -23,6 +23,21 @@
                     @Html.ActionLink("Add to Cart", "AddToCart", "Home", new { id = Model.ID }, new { @class = "btn btn-dark" })
                 </div>
             </div>
+            <div class="comment-section">
+                <div class="col-sm-12 col-md-12 col-lg-12 mx-auto mt-5">
+                    @Html.ActionLink("Add Comment", "AddComment", "Home", null, new { @class = "btn btn-primary mt-5 mb-4" })
+                    <div class="card">
+                        <div class="card-header">
+                            <p style="margin:auto;">Posted by: Berk</p>
+                        </div>
+                        <div class="card-body">
+                            <p>TEST COMMENT</p>
+                            <p class="text-muted">Posted: 26 July 2022</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 </section>
