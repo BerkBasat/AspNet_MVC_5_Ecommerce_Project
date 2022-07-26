@@ -1,16 +1,14 @@
-﻿using DAL.Entity;
-using Service.Concrete;
+﻿using Service.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using UI.CustomFilters;
-using UI.Models;
 
-namespace UI.Areas.Admin.Controllers
+namespace UI.Areas.Depot.Controllers
 {
-    [Authorize(Roles = "admin")]
+    [Authorize(Roles = "depot")]
     [AuthFilter]
     public class SupplierOrderController : Controller
     {

@@ -15,7 +15,6 @@ namespace Service.Concrete
 
         public decimal? OrderIncome()
         {
-            //todo: Exclude the refunded and cancelled orders later!!
             var total = db.OrderDetails.Sum(x => x.SubTotal);
             return total;
         }

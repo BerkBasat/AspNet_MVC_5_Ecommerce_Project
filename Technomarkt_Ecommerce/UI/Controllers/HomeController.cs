@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using UI.CustomFilters;
 using UI.Models;
 using UI.Utils;
 
@@ -20,6 +21,7 @@ namespace UI.Controllers
         SubCategoryService subCategoryService = new SubCategoryService();
         BrandService brandService = new BrandService();
         AppUserService appUserService = new AppUserService();
+        UserCommentService userCommentService = new UserCommentService();
 
 
         public ActionResult Index()
@@ -110,6 +112,33 @@ namespace UI.Controllers
             {
                 return RedirectToAction("Index");
             }
+        }
+
+        //Add Comments to Product!
+        [AuthFilter]
+        public ActionResult AddComment()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [AuthFilter]
+        public ActionResult AddComment(UserComment userComment)
+        {
+            try
+            {
+                userComment.Author = System.Web.HttpContext.Current.User.Identity.Name;
+                string result = userCommentService.Add(userComment);
+                TempData["info"] = result;
+                return RedirectToAction("ProductDetails");
+
+            }
+            catch (Exception ex)
+            {
+                TempData["error"] = ex.Message;
+            }
+
+            return View();
         }
 
         //Shopping Cart
