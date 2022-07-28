@@ -103,9 +103,11 @@ namespace UI.Controllers
 
         public ActionResult ProductDetails(Guid id)
         {
+
             var product = productService.GetById(id);
             if(product != null)
             {
+                ViewBag.UserComments = userCommentService.GetList();
                 return View(product);
             }
             else

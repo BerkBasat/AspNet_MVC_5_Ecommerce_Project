@@ -10,14 +10,9 @@ namespace DAL.Entity
 {
     public class UserComment : EntityRepository
     {
-        public UserComment()
-        {
-            Date = DateTime.Now.ToString("dddd, dd MMMM yyyy", new CultureInfo("en-GB"));
-        }
 
         public string Author { get; set; }
         public string Comment { get; set; }
-        public string Date { get; set; }
 
         public virtual List<UserAndComment> UserAndComments { get; set; }
     }
