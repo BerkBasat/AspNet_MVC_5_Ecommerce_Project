@@ -83,3 +83,14 @@ C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\Core.pdb
 C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\Core.dll.config
 C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\EntityFramework.SqlServer.dll
 C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\EntityFramework.SqlServer.xml
+C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\Newtonsoft.Json.dll
+C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\Twilio.AspNet.Common.dll
+C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\Twilio.AspNet.Mvc.dll
+C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\Twilio.dll
+C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\Newtonsoft.Json.xml
+C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\UI\bin\Twilio.xml
