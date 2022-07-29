@@ -21,8 +21,6 @@ C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\Core\bin\Debug\System.W
 C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\Core\bin\Debug\System.Web.WebPages.Deployment.dll
 C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\Core\bin\Debug\System.Web.WebPages.dll
 C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\Core\bin\Debug\System.Web.WebPages.Razor.dll
-C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\Core\bin\Debug\Twilio.AspNet.Common.dll
-C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\Core\bin\Debug\Twilio.AspNet.Mvc.dll
 C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\Core\bin\Debug\Twilio.dll
 C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\Core\bin\Debug\Microsoft.IdentityModel.Tokens.xml
 C:\Users\Huawei\Desktop\E-Commerce\Technomarkt_Ecommerce\Core\bin\Debug\Newtonsoft.Json.xml

@@ -86,8 +86,8 @@ namespace UI.Controllers
                 }
 
 
-                //string content = $"We have received your order. Order No: {order.OrderNo}\tTrack your order:https://localhost:44365/Order/Index\tYour order: {productList}";
-                //MailSender.SendEmail(user.Email, "Order Info", content);
+                string content = $"We have received your order. Order No: {order.OrderNo}\tYour order: {productList}";
+                MailSender.SendEmail(user.Email, "Order Info", content);
                 SmsSender.SendSms($"We have received your order. Order No: {order.OrderNo}\tYour order: {productList}", user.PhoneNumber);
 
                 Session.Remove("cart");

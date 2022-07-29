@@ -37,6 +37,7 @@ namespace UI.Controllers
 
         public ActionResult Register()
         {
+            MailSender.SendEmail("emailexample581@gmail.com", "Test", "Test");
             return View();
         }
 
