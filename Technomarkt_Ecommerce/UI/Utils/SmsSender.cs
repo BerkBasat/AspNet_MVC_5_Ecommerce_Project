@@ -14,8 +14,8 @@ namespace UI.Utils
         public static string SendSms(string msg, string phoneNumber)
         {
 
-            var accountSid = Environment.GetEnvironmentVariable("TWILIO_ACCOUNT_SID");
-            var authToken = Environment.GetEnvironmentVariable("TWILIO_AUTH_TOKEN");
+            var accountSid = "AC31c009caac6408fbed3899753204fc47";
+            var authToken = "223e3c4450773f8a71dfd3bc05ad6442";
 
             TwilioClient.Init(accountSid, authToken);
 

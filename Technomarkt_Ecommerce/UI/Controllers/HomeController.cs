@@ -15,7 +15,7 @@ namespace UI.Controllers
     public class HomeController : Controller
     {
         //todo: Create paypal getaway!
-        //todo: Add SMS sender!
+        //todo: Fix user comments!
 
         ProductService productService = new ProductService();
         SubCategoryService subCategoryService = new SubCategoryService();
